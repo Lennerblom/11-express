@@ -7,7 +7,8 @@
     "lint": "eslint **/*.js",
     "start": "node index.js",
     "watch": "nodemon index.js",
-    "test": "jest --verbose --coverage"
+    "test": "jest --verbose --coverage",
+    "test-watch": "jest --watchAll"
   },
   "repository": {
     "type": "git",
@@ -21,8 +22,12 @@
   },
   "homepage": "https://github.com/Lennerblom/11-express#readme",
   "dependencies": {
+    "babel-env": "^2.4.1",
+    "babel-eslint": "^8.2.3",
+    "babel-register": "^6.26.0",
     "dotenv": "^6.0.0",
     "eslint": "^4.19.1",
+    "express": "^4.16.3",
     "jest": "^23.1.0",
     "superagent": "^3.8.3"
   }

@@ -1,7 +1,8 @@
 'use strict';
 
-const router = require('../lib/router.js');
-const Notes = require('../models/notes.js');
+import express from 'express';
+const router = express.Router();
+import Notes from '../models/notes.js';
 
 let sendJSON = (res,data) => {
   res.statusCode = 200;
@@ -59,4 +60,4 @@ router.delete('/api/v1/notes', (req,res) => {
   }
 });
 
-module.exports = {};
+export default router;
