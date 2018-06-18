@@ -1,7 +1,7 @@
 'use strict';
-const fs = require('fs');
+import fs from 'fs';
 
-const storage = module.exports = {};
+const storage = {};
 
 // The location where we will store our individual model data files
 const dataDirectory = `${__dirname}/../../../data`;
@@ -83,3 +83,4 @@ storage.save = (data) => {
     });
   });
 };
+export default storage;
