@@ -2,17 +2,20 @@
 
 import express from 'express';
 let app = express();
-
+//export default app;
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 
+import router from './api/api.js';
 
+app.use(router);
 // Flag to know if we are up and going
-let isRunning = false;
 
-export function start(port) {
+let isRunning = false;
+let server;
+function start(port) {
   if (!isRunning) {
-    app.listen(port, (err) => {
+    server = app.listen(port, (err) => {
       if (err) {
         throw err;
       }
@@ -25,9 +28,10 @@ export function start(port) {
     console.log('Server is already running');
   }
 }
-export function stop() {
-  app.close(() => {
+function stop() {
+  server.close(() => {
     isRunning = false;
     console.log('Server has been stopped');
   });
 }
+export {start, stop};
