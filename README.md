@@ -4,7 +4,7 @@
 ___
 ###### TRAVIS: https://travis-ci.org/Lennerblom/11-express
 ###### HEROKU: https://express-server11.herokuapp.com/
-###### PR: https://github.com/Lennerblom/11-express/pull/1
+###### PR: https://github.com/Lennerblom/11-express/pull/2
 ___
 This server was created using Express.  The home route URL is: https://express-server11.herokuapp.com/ and accepts an optional name query string (?name=name), which will display "Hello" or "Hello Name" if option is added.  It will handle `GET`, `POST`, and `DELETE` requests. 
 
