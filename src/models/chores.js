@@ -43,7 +43,7 @@ class Chores{
   }
 
   static updateOne(criteria) {
-    return storage.update(criteria);
+    return storage.save(criteria);
   }
 
   static deleteOne(id) {
